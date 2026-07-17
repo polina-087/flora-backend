@@ -1,0 +1,23 @@
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Node.js dependencies and logs
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Secret environment variables
+.env
+
+# Editor and IDE settings
+.vscode/
+.idea/
+
+# Temporary folder for file uploads (ignore all files except .gitkeep)
+temp/*
+!temp/.gitkeep
+
+# Public photos directory (ignore uploaded images except .gitkeep)
+public/photos/*
+!public/photos/.gitkeep
