@@ -1,34 +1,26 @@
 import { Feedback } from "../models/index.js";
 
-export const retrieveAllFeedbacks = () => {
+export const listFeedbacks = () => {
     return Feedback.findAll({ order: [["createdAt", "ASC"]] });
 };
 
-export const findFeedbackById = (feedbackId) => {
+export const getFeedbackById = (feedbackId) => {
     return Feedback.findByPk(feedbackId);
 };
 
-export const insertFeedback = (payload) => {
+export const createFeedback = (payload) => {
     return Feedback.create(payload);
 };
 
-export const editFeedback = async (feedbackId, updateData) => {
+export const updateFeedback = async (feedbackId, updateData) => {
     const existingFeedback = await Feedback.findByPk(feedbackId);
-
-    if (!existingFeedback) {
-        return null;
-    }
-
+    if (!existingFeedback) return null;
     return existingFeedback.update(updateData);
 };
 
-export const eraseFeedback = async (feedbackId) => {
+export const removeFeedback = async (feedbackId) => {
     const targetFeedback = await Feedback.findByPk(feedbackId);
-
-    if (!targetFeedback) {
-        return null;
-    }
-
+    if (!targetFeedback) return null;
     await targetFeedback.destroy();
     return targetFeedback;
 };

@@ -1,5 +1,5 @@
 import { Order } from "../models/index.js";
 
-export const insertOrder = (payload) => {
+export const createOrder = (payload) => {
     return Order.create(payload);
 };
