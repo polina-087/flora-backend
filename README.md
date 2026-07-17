@@ -2,7 +2,7 @@
 
 This repository contains the backend architecture for the Flora flower shop. It is a fully functional RESTful API built using Node.js, Express, and PostgreSQL (via Sequelize ORM). The project includes request data validation, image upload handling, and interactive OpenAPI documentation.
 
-Serves as the backend for the [Flora Client App](laterpastelink).
+Serves as the backend for the [Flora Client App](https://polina-087.github.io/UMT-markup-practice-ZhuravlovaPolina/)
 
 ## 🚀 Tech Stack
 
